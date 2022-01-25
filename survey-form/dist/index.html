@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Survey form</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<header class="header">
+  <h1 id="title" class="text-center">Survey form</h1>
+  <p id="description" class="description text-center">Thank you for helping us improve the platform. <br> <span class="please">Please take a minute to give us a feedback.</span>
+  </p>
+</header>
+
+<form id="survey-form">
+  <div class="form-group">
+    <label id="name-label"
+           for="name">Name:
+          <span class="clue">&nbsp;*</span>
+    </label>
+    <input 
+         type="text" 
+         id="name" 
+         name="name"
+         class="form-control"
+         placeholder="Enter your name"
+         required
+     />
+  </div>
+  <div class="form-group">
+    <label id="name-label" 
+           for="email">E-mail: 
+           <span class="clue">&nbsp;*</span>
+    </label>
+    <input 
+         type="email" 
+         id="email" 
+         name="email"
+         class="form-control"
+         placeholder="Enter your e-mail"
+         required
+     />
+  </div>
+  <div class="form-group">
+    <label id="number-label"
+         for="number">Age:
+    </label>
+    <input
+          type="number"
+          id="number"
+          name="age"
+          class="form-control"
+          placeholder="Enter your age"
+          min="10"
+          max="99"
+          tabindex="0"
+     />
+ </div>
+  <div class="form-group">
+    <p>Which option best describes your current role?</p>
+    <select id="dropdown" name="role" class="form-control" required>
+        <option disabled selected value>Select current role</option>
+        <option value="student">Student</option>
+        <option value="job">Full Time Job</option>
+        <option value="partTime">Part-time Job</option>
+      <option value="jobStudent">Full Time Job + Student</option>
+        <option value="preferNo">Prefer not to say</option>
+        <option value="other">Other</option>
+      </select>
+  </div>
+  
+  <div class="form-group">
+      <p>Would you recommend our course to a friend?</p>
+      <label class="check-box">
+        Definitely
+        <input
+          name="user-recommend"
+          value="definitely"
+          type="radio"
+          class="input-radio"
+          checked
+        />
+        <span class="radiomark"></span>
+      </label>
+    
+      <label class="check-box">
+        Maybe
+        <input
+          name="user-recommend"
+          value="maybe"
+          type="radio"
+          class="input-radio"
+        />
+        <span class="radiomark"></span>
+      </label>
+    
+      <label class="check-box">
+        Not sure
+        <input
+          name="user-recommend"
+          value="not-sure"
+          type="radio"
+          class="input-radio"/>
+        <span class="radiomark"></span>
+        </label
+      >
+    </div>
+
+    <div class="form-group">
+      <p>
+        What is your favorite feature of our course?
+      </p>
+      <select id="most-like" name="mostLike" class="form-control" required>
+        <option disabled selected value>Select an option</option>
+        <option value="opt1">opt1</option>
+        <option value="opt2">opt2</option>
+        <option value="opt3">opt3</option>
+        <option value="opt4">opt4</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <p>
+        What did you like in our course?
+        <span class="clue">(Check all that apply)</span>
+      </p>
+
+      <label class="check-box">
+        opt1
+        <input
+          name="prefer"
+          value="op1"
+          type="checkbox"
+          class="input-checkbox"
+               />
+        <span class="checkmark"></span>
+      </label>
+      
+      <label class="check-box">
+        opt2
+        <input
+          name="prefer"
+          value="opt2"
+          type="checkbox"
+          class="input-checkbox"
+        />
+        <span class="checkmark"></span>
+      </label>
+      
+      <label class="check-box">
+        opt3
+        <input
+          name="prefer"
+          value="opt3"
+          type="checkbox"
+          class="input-checkbox"
+        />
+        <span class="checkmark"></span>
+      </label>
+      
+      <label class="check-box">
+        opt4
+        <input
+          name="prefer"
+          value="opt4"
+          type="checkbox"
+          class="input-checkbox"
+        />
+        <span class="checkmark"></span>
+      </label>
+      
+      <label class="check-box">
+        opt5
+        <input
+          name="prefer"
+          value="opt5"
+          type="checkbox"
+          class="input-checkbox"
+        />
+        <span class="checkmark"></span>
+      </label> 
+    </div>
+
+    <div class="form-group">
+      <p>Any comments or suggestions?</p>
+      <textarea
+        id="comments"
+        class="input-textarea"
+        name="comment"
+        placeholder="Enter your comment here..."
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" 
+              id="submit" 
+              class="submit-button"
+              formaction="">
+        Submit
+      </button>
+    </div>
+ 
+  <p id="required" class="clue">* required </p>
+</form>
+<!-- partial -->
+  
+</body>
+</html>
